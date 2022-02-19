@@ -1,0 +1,33 @@
+.square-add{
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: 2px solid gray;
+
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.icon::before,.icon::after{
+  box-sizing: border-box;
+  content: '';
+  width: 2px;
+  height: 10px;
+  display: block;
+  position: relative;
+  background-color: gray;
+  border-radius: 4px;
+  top: 8px;
+  left: 3.5px;
+}
+
+.icon::before{
+  width: 10px;
+  height: 2px;
+}
+
+.icon::after{
+  top: 2px;
+  left: 7.5px;
+}
+
