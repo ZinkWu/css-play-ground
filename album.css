@@ -21,11 +21,11 @@
 .album > .context::after {
   top: 4px;
   right: 5px;
-  transform: rotate(320deg);
+  transform: rotateZ(-45deg);
 }
 
 .album > .context::before {
   top: 4px;
   right: 2px;
-  transform: rotate(40deg);
+  transform: rotateZ(45deg);
 }
