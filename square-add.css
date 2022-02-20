@@ -8,26 +8,26 @@
   box-sizing: border-box;
 }
 
-.icon::before,.icon::after{
+.square-add > .context::before, .square-add > .context::after{
   box-sizing: border-box;
   content: '';
   width: 2px;
   height: 10px;
   display: block;
-  position: relative;
+  position: absolute;
   background-color: gray;
   border-radius: 4px;
-  top: 8px;
+  top: 7.5px;
   left: 3.5px;
 }
 
-.icon::before{
+.square-add > .context::before{
   width: 10px;
   height: 2px;
 }
 
-.icon::after{
-  top: 2px;
+.square-add > .context::after{
+  top: 3.5px;
   left: 7.5px;
 }
 

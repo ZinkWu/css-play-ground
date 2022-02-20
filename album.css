@@ -1,0 +1,31 @@
+.album{
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: 2px solid gray;
+
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.album > .context::after, .album > .context::before {
+  content: '';
+  width: 6px;
+  height: 2px;
+  background-color: gray;
+  display: block;
+  position: absolute;
+
+}
+
+.album > .context::after {
+  top: 4px;
+  right: 5px;
+  transform: rotate(320deg);
+}
+
+.album > .context::before {
+  top: 4px;
+  right: 2px;
+  transform: rotate(40deg);
+}
