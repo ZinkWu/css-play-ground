@@ -6,7 +6,7 @@
   background: linear-gradient(to left, gray 50%, transparent 0)no-repeat 50% 56%/10px 2px,
     linear-gradient(to left, gray 50%, transparent 0)no-repeat 43% 42%/4px 7px;
   position: relative;
-  /* 两张图片，no-repeat 视口位置（left top） 宽高 */
+  /* 图片(用线性渐变生成图片)，no-repeat 视口位置（left top） 宽高 */
 }
 
 .alarm::after {
