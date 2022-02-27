@@ -13,3 +13,6 @@
 .component-container > p {
   font-size: 12px;
 }
+*{
+  box-sizing: border-box;
+}
