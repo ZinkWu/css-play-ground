@@ -21,3 +21,10 @@
 html,body{
   height: 100vh;
 }
+
+.icon-wrapper{
+  transform: scale(1.5);
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
