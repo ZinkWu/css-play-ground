@@ -469,6 +469,8 @@
   width: 5px;
   height: 24px;
 }
+
+/* 思路还是做出两个三角形，不过一个是锐角 */
 .bolt::after,.bolt::before{
   content: "";
   display: block;;
@@ -487,5 +489,28 @@
   border-top: 14px solid gray;
   right: 0;
   bottom: 0;
+}
+
+.corner-left-up{
+  border: 2px solid gray;
+  width: 12px;
+  height: 18px;
+  border-top: transparent;
+  border-right: transparent;
+  border-bottom-left-radius: 6px;
+  position: relative;
+}
+
+.corner-left-up::after{
+  content: '';
+  display: block;
+  border: 2px solid gray;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  transform: rotateZ(-45deg);
+  left: -5px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
 }
 
