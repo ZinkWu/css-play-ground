@@ -464,34 +464,36 @@
   right: -6px;
 }
 
-.bolt{
+.bolt {
   position: relative;
   width: 5px;
   height: 24px;
 }
 
 /* 思路还是做出两个三角形，不过一个是锐角 */
-.bolt::after,.bolt::before{
+.bolt::after, .bolt::before {
   content: "";
-  display: block;;
+  display: block;
+  ;
   position: absolute;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   transform: rotate(30deg);
 }
-.bolt::after{
+
+.bolt::after {
   border-bottom: 14px solid gray;
   left: 0;
   top: 0;
 }
 
-.bolt::before{
+.bolt::before {
   border-top: 14px solid gray;
   right: 0;
   bottom: 0;
 }
 
-.corner-left-up{
+.corner-left-up {
   border: 2px solid gray;
   width: 12px;
   height: 18px;
@@ -501,7 +503,7 @@
   position: relative;
 }
 
-.corner-left-up::after{
+.corner-left-up::after {
   content: '';
   display: block;
   border: 2px solid gray;
@@ -514,7 +516,7 @@
   border-left-color: transparent;
 }
 
-.usb{
+.usb {
   border: 2px solid gray;
   width: 16px;
   height: 18px;
@@ -523,7 +525,7 @@
   position: relative;
 }
 
-.usb::after{
+.usb::after {
   content: '';
   display: block;
   position: absolute;
@@ -533,10 +535,10 @@
   top: -9px;
   left: 1px;
   background: linear-gradient(to right, gray 50%, transparent 50%)no-repeat 1px 1px/2px 2px,
-  linear-gradient(to right, gray 50%, transparent 50%)no-repeat 4px 1px/2px 2px
+    linear-gradient(to right, gray 50%, transparent 50%)no-repeat 4px 1px/2px 2px
 }
 
-.user{
+.user {
   border: 2px solid gray;
   width: 12px;
   height: 12px;
@@ -546,7 +548,7 @@
   position: relative;
 }
 
-.user::after{
+.user::after {
   content: '';
   display: block;
   position: absolute;
@@ -556,4 +558,76 @@
   border: 2px solid gray;
   top: -9px;
   left: .5px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.spinner-two-alt {
+  border: 2px solid gray;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: spinner 1s infinite;
+}
+
+@keyframes heat-beat {
+  0% {
+    transform: scale(1) rotateZ(-45deg);
+  }
+
+  50% {
+    transform: scale(1.2) rotateZ(-45deg);
+  }
+
+  100%{
+    transform: scale(1) rotateZ(-45deg);
+  }
+}
+
+.heat-beat {
+  border: 2px solid gray;
+  width: 16px;
+  height: 16px;
+  transform: rotateZ(-45deg);
+  border-top: transparent;
+  border-right: transparent;
+  position: relative;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  animation: heat-beat 1s infinite linear;
+}
+
+.heat-beat::after, .heat-beat::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 2px solid gray;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.heat-beat::after {
+  left: -2px;
+  top: -3px;
+  border-bottom: 2px solid transparent;
+  border-bottom-left-radius: 2px;
+}
+
+.heat-beat::before {
+  right: -3px;
+  bottom: -2px;
+  border-left: 2px solid transparent;
+  border-bottom-left-radius: 2px;
 }
