@@ -536,3 +536,24 @@
   linear-gradient(to right, gray 50%, transparent 50%)no-repeat 4px 1px/2px 2px
 }
 
+.user{
+  border: 2px solid gray;
+  width: 12px;
+  height: 12px;
+  border-bottom: transparent;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+}
+
+.user::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  top: -9px;
+  left: .5px;
+}
